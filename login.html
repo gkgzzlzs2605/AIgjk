@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>桐林国际科技 - 登录</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>桐林国际科技有限公司</h1>
+        <form id="loginForm">
+            <input type="text" placeholder="账号" id="username" required>
+            <input type="password" placeholder="密码" id="password" required>
+            <button type="submit">登录</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if(username === 'tlkjgjx' && password === 'tlkjgjx') {
+                window.location.href = 'index.html';
+            } else {
+                alert('账号或密码错误');
+            }
+        });
+    </script>
+</body>
+</html>
